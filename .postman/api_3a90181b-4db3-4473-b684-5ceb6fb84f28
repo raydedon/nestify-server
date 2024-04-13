@@ -14,8 +14,8 @@ rootDirectory = postman/collections
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
-files[] = {"path":"PANKYDCODER_1-MarriageMate-1.0.0-resolved.yaml","metaData":{}}
+files[] = {"path":"openapi.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3
-rootFiles[] = PANKYDCODER_1-MarriageMate-1.0.0-resolved.yaml
+rootFiles[] = openapi.yaml
