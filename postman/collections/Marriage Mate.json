@@ -1,0 +1,863 @@
+{
+	"info": {
+		"_postman_id": "d1c9defb-ccb9-49bf-ab83-6c0228ca6872",
+		"name": "Marriage Mate",
+		"description": "The API for the matrimonial website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "34255311-d1c9defb-ccb9-49bf-ab83-6c0228ca6872"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "/users/:id",
+							"id": "5e83a7ae-4e41-4052-939d-9991c85093d8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "79951c63-4d23-4aec-9d6d-46ff399e8ef4",
+									"name": "profile details",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "accaa285-e871-4cc6-b24b-e003e863c6e6"
+				},
+				{
+					"name": "/users",
+					"id": "de65376c-0a45-47f4-845b-78f77ea2a32f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?gender=<string>&city=<string>&domain=<string>&nativeCity=<string>&cast=<string>&religion=<string>&offset=<integer>&limit=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"description": "(Required) ",
+									"key": "gender",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "city",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "domain",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "nativeCity",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "cast",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "religion",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "offset",
+									"value": "<integer>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "limit",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "52876e57-6875-4560-99ad-56808655b7a7",
+							"name": "list of profiles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?gender=<string>&city=<string>&domain=<string>&nativeCity=<string>&cast=<string>&religion=<string>&offset=<integer>&limit=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"description": "(Required) ",
+											"key": "gender",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "city",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "domain",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "nativeCity",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "cast",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "religion",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "offset",
+											"value": "<integer>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "limit",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"phoneNumber\": \"<string>\",\n    \"id\": \"<uuid>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"email_verified\": \"<boolean>\",\n    \"phoneNumberVerified\": \"<boolean>\",\n    \"gender\": \"other\",\n    \"dob\": \"<date>\",\n    \"current_city\": \"<string>\",\n    \"createdAt\": \"<dateTime>\"\n  },\n  {\n    \"phoneNumber\": \"<string>\",\n    \"id\": \"<uuid>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"email_verified\": \"<boolean>\",\n    \"phoneNumberVerified\": \"<boolean>\",\n    \"gender\": \"female\",\n    \"dob\": \"<date>\",\n    \"current_city\": \"<string>\",\n    \"createdAt\": \"<dateTime>\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"id": "574048a4-be0a-4930-ae50-c102e3fbb8f8"
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "/profile",
+					"id": "5a2ec6dc-f850-4bef-a2f6-ef1c6ae22c14",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/profile?name=<string>&dob=<string>&gender=<string>&userType=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profile"
+							],
+							"query": [
+								{
+									"description": "(Required) ",
+									"key": "name",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "dob",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "gender",
+									"value": "<string>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "userType",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "c8979aaa-5a84-406a-be37-ac38f4d85b94",
+							"name": "Profile saved",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/profile?name=<string>&dob=<string>&gender=<string>&userType=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profile"
+									],
+									"query": [
+										{
+											"description": "(Required) ",
+											"key": "name",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "dob",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "gender",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "userType",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "fa5ee8bf-8037-4922-9ae9-846a1482f97f"
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "/login",
+					"id": "5c26ad91-499c-4e6e-897d-fd8761b437e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phoneNumber\": \"+91-9552449305\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{domain}}:{{port}}/login",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "a1567153-062c-46e5-9667-f55f7321e948",
+							"name": "OTP Sent with requestId",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phoneNumber\": \"+91-9552449305\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "ed313517-f043-4658-9101-626905e89354"
+		},
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "{type}",
+					"item": [
+						{
+							"name": "/bookings/:type",
+							"id": "ea09e115-699c-4446-ab6e-d997f06ba3bd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:type?id=<string>&slotStartTime=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":type"
+									],
+									"query": [
+										{
+											"description": "(Required) ",
+											"key": "id",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "slotStartTime",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "type",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e6f0db6d-bce8-49fd-9c9e-fd620efe8651",
+									"name": "transactionId",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:type?id=<string>&slotStartTime=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":type"
+											],
+											"query": [
+												{
+													"description": "(Required) ",
+													"key": "id",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) ",
+													"key": "slotStartTime",
+													"value": "<string>"
+												}
+											],
+											"variable": [
+												{
+													"key": "type"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "a652069a-7043-47f9-a213-0590cfa3b30d"
+				},
+				{
+					"name": "status",
+					"item": [
+						{
+							"name": "{transactionId}",
+							"item": [
+								{
+									"name": "/bookings/status/:transactionId",
+									"id": "d37fd528-3825-4c64-8223-fe340cda1686",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/status/:transactionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												"status",
+												":transactionId"
+											],
+											"variable": [
+												{
+													"key": "transactionId",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "39e5c5cd-980b-4805-84ce-4536272fcbc9",
+											"name": "payment status",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/bookings/status/:transactionId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"bookings",
+														"status",
+														":transactionId"
+													],
+													"variable": [
+														{
+															"key": "transactionId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
+										}
+									]
+								}
+							],
+							"id": "20d0ceb4-5a6a-4d55-ae1f-6c18adf0b683"
+						}
+					],
+					"id": "3366b37b-bb0e-4b98-8ae0-389a9fd3390e"
+				},
+				{
+					"name": "/bookings",
+					"id": "f768423d-475e-414d-8392-79db4447b437",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bookings?offset=<integer>&limit=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"description": "(Required) ",
+									"key": "offset",
+									"value": "<integer>"
+								},
+								{
+									"description": "(Required) ",
+									"key": "limit",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "010c37da-ca55-4382-b6af-e3a5f33e426e",
+							"name": "JSON with booking details in list. We will show 1 message at a time for type=dm",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bookings?offset=<integer>&limit=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									],
+									"query": [
+										{
+											"description": "(Required) ",
+											"key": "offset",
+											"value": "<integer>"
+										},
+										{
+											"description": "(Required) ",
+											"key": "limit",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "23a63842-3498-4b74-81d2-72132cea851a"
+		},
+		{
+			"name": "availability",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "/availability/:id",
+							"id": "2c531fce-e971-429a-b3c2-9a41b0feac32",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/availability/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"availability",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e3954903-058f-477b-bb4d-110d91ba7689",
+									"name": "JSON representing availability",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/availability/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"availability",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "3697f34c-88bf-4e51-b206-409379a9dec2"
+				}
+			],
+			"id": "ca056f93-a59b-43e4-a597-edf769f4579a"
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/auth",
+					"id": "f06584bf-6ddc-4283-945a-4f863adc8678",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"requestId\": \"b591efe2-ddd8-4209-854f-a137787ebb9b\",\n  \"otp\": \"490813\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "796588eb-63ad-4af8-944e-b136d78e4fdd",
+							"name": "OTP verified successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"requestId\": \"<string>\",\n  \"otp\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "9008e12c-a07f-4776-8ae9-506658570ba0",
+							"name": "Invalid OTP or phone number",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"requestId\": \"<string>\",\n  \"otp\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "5542a58e-a04c-4319-8005-e604999357a2"
+		}
+	],
+	"variable": [
+		{
+			"id": "2f3f016b-4812-442a-9790-942251b0a9c5",
+			"key": "baseUrl",
+			"value": "http://localhost:5003"
+		}
+	]
+}

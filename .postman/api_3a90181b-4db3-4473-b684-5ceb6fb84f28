@@ -9,6 +9,7 @@ id = 3a90181b-4db3-4473-b684-5ceb6fb84f28
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"34255311-d1c9defb-ccb9-49bf-ab83-6c0228ca6872","path":"Marriage Mate.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 
