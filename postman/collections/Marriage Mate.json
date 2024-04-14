@@ -319,6 +319,20 @@
 			"item": [
 				{
 					"name": "/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6a0e81c1-9332-4938-a7a2-a0efe3557db5",
+								"exec": [
+									"const json = pm.response.json();",
+									"console.info(json);",
+									"pm.collectionVariables.set(\"requestId\", json.requestId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "5c26ad91-499c-4e6e-897d-fd8761b437e3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -337,7 +351,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"phoneNumber\": \"+91-9552449305\"\n}",
+							"raw": "{\n  \"phoneNumber\": \"+91-9552449307\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -716,6 +730,21 @@
 			"item": [
 				{
 					"name": "/auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0755b9dd-912b-414d-a1d5-22e1a73b1e66",
+								"exec": [
+									"const json = pm.response.json();",
+									"console.info(json);",
+									"pm.collectionVariables.set(\"accessToken\", json.accessToken);",
+									"pm.collectionVariables.unset(\"requestId\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "f06584bf-6ddc-4283-945a-4f863adc8678",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -734,7 +763,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"requestId\": \"b591efe2-ddd8-4209-854f-a137787ebb9b\",\n  \"otp\": \"490813\"\n}",
+							"raw": "{\n  \"requestId\": \"{{requestId}}\",\n  \"otp\": \"412678\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -855,9 +884,19 @@
 	],
 	"variable": [
 		{
-			"id": "2f3f016b-4812-442a-9790-942251b0a9c5",
+			"id": "c49577f7-16a9-401f-965b-5a6fa996553e",
 			"key": "baseUrl",
 			"value": "http://localhost:5003"
+		},
+		{
+			"id": "4acc122a-7f49-4062-a238-661b84279b3f",
+			"key": "requestId",
+			"value": ""
+		},
+		{
+			"id": "7c0a71b4-6ec0-4185-9d86-f9728df6cd77",
+			"key": "accessToken",
+			"value": ""
 		}
 	]
 }
